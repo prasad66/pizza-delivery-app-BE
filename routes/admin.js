@@ -91,8 +91,8 @@ router.route("/forgotpassword").post(async (req, res) => {
         },
     });
 
-    // const link = `https:// /forgotpassword/verify/${token}`;
-    const link = `http://localhost:3000/forgotpassword/verify/${token}`;
+    const link = `https://${process.env.frontend}/admin/forgotpassword/verify/${token}`;
+    // const link = `http://localhost:3000/forgotpassword/verify/${token}`;
     const mailoptions = {
         from: "userbase@gmail.com",
         to: email,
